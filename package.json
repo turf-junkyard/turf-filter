@@ -1,0 +1,32 @@
+{
+  "name": "turf-filter",
+  "version": "0.1.0",
+  "description": "turf filter module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morganherlocker/turf-filter.git"
+  },
+  "keywords": [
+    "geojson",
+    "filter",
+    "turf"
+  ],
+  "author": "morganherlocker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morganherlocker/turf-filter/issues"
+  },
+  "homepage": "https://github.com/morganherlocker/turf-filter",
+  "devDependencies": {
+    "tape": "^2.12.2",
+    "turf-featurecollection": "^0.1.0",
+    "turf-point": "^0.1.0"
+  },
+  "dependencies": {
+    "turf-featurecollection": "^0.1.0"
+  }
+}
