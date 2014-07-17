@@ -4,6 +4,28 @@ turf-filter
 
 Keeps any features from a feature collection that match a property value.
 
+###Install
+
+```sh
+npm install turf-filter
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|fc|A FeatureCollection|
+|property|Property to check|
+|value|Value for features to keep|
+
+###Usage
+
+```js
+filter(fc, property, value)
+```
+
+###Example
+
 ```js
 var filter = require('turf-filter')
 var point = require('turf-point')
