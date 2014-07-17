@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/morganherlocker/turf-filter",
   "devDependencies": {
-    "tape": "^2.12.2",
+    "tape": "^2.13.3",
     "turf-featurecollection": "^0.1.0",
-    "turf-point": "^0.1.0"
+    "turf-point": "^0.1.1"
   },
   "dependencies": {
     "turf-featurecollection": "^0.1.0"
