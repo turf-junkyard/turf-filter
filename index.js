@@ -10,12 +10,12 @@ var featureCollection = require('turf-featurecollection');
  * @return {FeatureCollection} a filtered collection with only features that match input `key` and `value`
  * @example
  * var trees = turf.featurecollection([
- *  turf.point(1,2, {species: 'oak'}),
- *  turf.point(2,1, {species: 'birch'}),
- *  turf.point(3,1, {species: 'oak'}),
- *  turf.point(2,2, {species: 'redwood'}),
- *  turf.point(2,3, {species: 'maple'}),
- *  turf.point(4,2, {species: 'oak'})
+ *  turf.point(-72.581777, 44.260875, {species: 'oak'}),
+ *  turf.point(-72.570018, 44.260691, {species: 'birch'}),
+ *  turf.point(-72.576284, 44.257925, {species: 'oak'}),
+ *  turf.point(-72.56916, 44.254605, {species: 'redwood'}),
+ *  turf.point(-72.581691, 44.24858, {species: 'maple'}),
+ *  turf.point(-72.583837, 44.255773, {species: 'oak'})
  * ]);
  *
  * var filtered = turf.filter(trees, 'species', 'oak');
