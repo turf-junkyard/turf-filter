@@ -4,10 +4,10 @@ var featureCollection = require('turf-featurecollection');
  * Filters a {@link FeatureCollection} by a  property key-value combination
  *
  * @module turf/filter
- * @param {FeatureCollection} features
- * @param {string} key the key in a feature's properties property
- * @param {string} value the desired value of that property
- * @return {FeatureCollection} a filtered collection with only features that match.
+ * @param {FeatureCollection} features input FeatureCollection
+ * @param {String} key the property on which to filter
+ * @param {String} value the value of that property on which to filter
+ * @return {FeatureCollection} a filtered collection with only features that match input `key` and `value`
  * @example
  * var trees = turf.featurecollection([
  *  turf.point(1,2, {species: 'oak'}),
@@ -17,10 +17,13 @@ var featureCollection = require('turf-featurecollection');
  *  turf.point(2,3, {species: 'maple'}),
  *  turf.point(4,2, {species: 'oak'})
  * ]);
- * //=trees
+ *
  * var filtered = turf.filter(trees, 'species', 'oak');
+ *
+ * //=trees
+ *
  * //=filtered
-*/
+ */
 module.exports = function(collection, key, val) {
   var newFC = featureCollection([]);
   for(var i = 0; i < collection.features.length; i++) {
