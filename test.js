@@ -29,6 +29,8 @@ test('supports key-based complex filtering', function(t) {
     point([5, 5], {elevation: 500})
   ]);
 
+  // We still use the 'key' argument, and the value of that property for each feature
+  // is passed into the filter callback.
   newFC = filter(features, 'elevation', function(elev) {
     return elev > 200 && elev < 400;
   });
@@ -47,6 +49,9 @@ test('supports complex filtering with access to all properties', function (t) {
     point([5, 5], {elevation: 500, accuracy: 0.8})
   ]);
 
+  // In cases where we need to filter by more than one key, no 'key'
+  // argument is used, and the callback receives all properties (as well as
+  // the feature itself, just in case it's needed)
   newFC = filter(features, function(props, feature) {
     return props.elevation > 200 && props.accuracy >  0.8;
   });
