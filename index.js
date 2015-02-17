@@ -81,11 +81,24 @@ var featureCollection = require('turf-featurecollection');
  * //=filtered
  */
 module.exports = function(collection, key, val) {
-  var newFC = featureCollection([]);
-  for(var i = 0; i < collection.features.length; i++) {
-    if(collection.features[i].properties[key] === val) {
-      newFC.features.push(collection.features[i]);
+  var features = [];
+  var fn;
+
+  if (typeof key == 'function') {
+    fn = function(feature) {
+        return key(feature.properties, feature);
+    };
+  } else if (typeof val == 'function') {
+    fn = function(feature) {
+        return val(feature.properties[key])
+    };
+  } else {
+    fn = function(feature) {
+        return feature.properties[key] === val;
     }
   }
-  return newFC;
+
+  var features = collection.features.filter(fn);
+
+  return featureCollection(features);
 };
