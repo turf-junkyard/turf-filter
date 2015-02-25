@@ -5,10 +5,10 @@ var featureCollection = require('turf-featurecollection');
  *
  * @module turf/filter
  * @category data
- * @param {FeatureCollection} features input FeatureCollection of any type
+ * @param {FeatureCollection<(Point|LineString|Polygon)>} features input FeatureCollection of any type
  * @param {String} key the property on which to filter
  * @param {String} value the value of that property on which to filter
- * @return {FeatureCollection} a filtered collection with only features that match input `key` and `value`
+ * @return {FeatureCollection<(Point|LineString|Polygon)>} a filtered collection with only features that match input `key` and `value`
  * @example
  * var features = {
  *   "type": "FeatureCollection",
