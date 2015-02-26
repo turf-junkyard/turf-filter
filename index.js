@@ -1,7 +1,7 @@
 var featureCollection = require('turf-featurecollection');
 
 /**
- * Takes a {@link FeatureCollection} and filters it by a given property and value
+ * Takes a {@link FeatureCollection} and filters it by a given property and value.
  *
  * @module turf/filter
  * @category data
