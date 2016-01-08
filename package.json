@@ -45,11 +45,11 @@
     "turf-featurecollection": "^1.0.0",
     "turf-point": "^2.0.0",
     "dox": "^0.6.1",
-    "doxme": "^1.4.3"
+    "doxme": "^1.4.3",
+    "eslint": "^1.10.3",
+    "eslint-config-mourner": "^1.0.1"
   },
   "dependencies": {
-    "eslint": "^1.10.3",
-    "eslint-config-mourner": "^1.0.1",
     "turf-featurecollection": "^1.0.0"
   }
 }
