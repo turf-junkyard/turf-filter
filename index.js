@@ -80,10 +80,10 @@ var featureCollection = require('turf-featurecollection');
  *
  * //=filtered
  */
-module.exports = function(collection, key, val) {
+module.exports = function (collection, key, val) {
   var newFC = featureCollection([]);
-  for(var i = 0; i < collection.features.length; i++) {
-    if(collection.features[i].properties[key] === val) {
+  for (var i = 0; i < collection.features.length; i++) {
+    if (collection.features[i].properties[key] === val) {
       newFC.features.push(collection.features[i]);
     }
   }
